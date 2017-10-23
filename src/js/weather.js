@@ -13,22 +13,27 @@
 /*-----------------------------设置天气函数----------------------------------*/
 		var codeImg = 'https://weixin.jirengu.com/images/weather/code/'
 		function setToday (obj,index) {
+      $('.inner').eq(index).find('h3').text(obj.future[0].day)
 			$('.inner').eq(index).find('.now-wea>.tem').text(obj.now.temperature+'°')
 			$('.inner').eq(index).find('.now-wea>p').text(obj.today.suggestion.uv.details)
 			$('.inner').eq(index).find('.now-wea>img').attr('src',codeImg+obj.now.code+'.png')
 			var $list = $('.inner').eq(index).find('.future>.list>li')
 			$list.each(function (ind) {
-				$(this).find('.am').attr('src',codeImg + obj.future[ind].code1 + '.png')
-				$(this).find('.pm').attr('src',codeImg + obj.future[ind].code2 + '.png')
-				$(this).find('.wind').text(obj.future[ind].wind)
-				$(this).find('.tem').text(obj.future[ind].high+'°/'+obj.future[ind].low+'°')
+        $(this).find('.date').text(obj.future[ind+1].day)
+				$(this).find('.am').attr('src',codeImg + obj.future[ind+1].code1 + '.png')
+				$(this).find('.pm').attr('src',codeImg + obj.future[ind+1].code2 + '.png')
+				$(this).find('.wind').text(obj.future[ind+1].wind)
+				$(this).find('.tem').text(obj.future[ind+1].high+'°/'+obj.future[ind+1].low+'°')
 			})
 		}
 		function setCity (cityName,index) {
 			$('.inner').eq(index).find('.now-wea>h2').text(cityName+'市')
 		}
 		function set24h (obj,index) {
+
 			$('.inner').eq(index).find('.wea-24h>li').each(function (ind) {
+
+        $(this).find('.date').text(obj.hourly[8+ind*3].temperature + '°')
 				$(this).find('img').attr('src',codeImg + obj.hourly[8+ind*3].code + '.png')
 				$(this).find('span').text(obj.hourly[8+ind*3].temperature + '°')
 			})
@@ -52,7 +57,7 @@
 		var timer2 = null,timer3 = null,circlesNum = 0
 		/*--------------加定时器防止重复点击-----------------------*/
 /*----------------------'<'按钮左滑-------------------------*/
-		$('.control>#go-left').click(function () {
+		$('.control>#go-right').click(function () {
 			if(timer2){ clearTimeout(timer2) }
 			timer2 = setTimeout(function(){
 				var $left = parseInt($('.content').css('left'))
@@ -72,7 +77,7 @@
 			},500)
 		})
 /*----------------------'>'按钮右滑-------------------------*/
-		$('.control>#go-right').click(function () {
+		$('.control>#go-left').click(function () {
 			if(timer3){ clearTimeout(timer3) }
 			timer3 = setTimeout(function(){
 				var $left = parseInt($('.content').css('left'))
@@ -187,7 +192,7 @@
 			$('.content').css('width',100*($length+1)+'%')
 			$('.inner').css('width',100/($length+1)+'%')
 			$('.circles').append($('<span></span>'))
-			$('.control>#go-left').addClass('left-active')
+			$('.control>#go-right').addClass('right-active')
 			$('#addWea>span').css('display','none')
 			$('#addWea>input').removeAttr('disabled').val('')
 			$('#addWea').css('display','none')

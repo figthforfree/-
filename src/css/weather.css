@@ -27,7 +27,7 @@
 			cursor: pointer;
 		}
 		.control>#add {
-			color: rgb(134, 147, 148);
+			color: #00a1d6;
 		}
 		.control>#go-right,
 		.control>#go-left {
@@ -44,7 +44,7 @@
 		}
 		.left-active,
 		.right-active {
-			color: rgb(50,200,200)!important;
+			color: #00a1d6!important;
 		}
 		.circles {
 			position: fixed;
@@ -55,7 +55,7 @@
 			text-align: center;
 		}
 		.active {
-			background: rgb(134, 147, 148)!important;
+			background: #00a1d6!important;
 		}
 		.circles>span {
 			display: inline-block;
@@ -116,7 +116,8 @@
 		.today-wea,.future {
 			width: calc(50% - 1px);
 			float: left;
-			text-align: center;
+      text-align: center;
+      padding: 20px 0;
 		}
 		.future {
 			border-left: 1px solid #aaa;
