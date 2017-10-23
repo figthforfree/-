@@ -16,8 +16,15 @@
 			overflow: hidden;
 		}
 		#wrap {
-			background: rgba(243, 238, 238, 0.5);
+			background: no-repeat url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508783036982&di=a1769c4fa8886918a40a76b4e30dcd41&imgtype=0&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fa50f4bfbfbedab640e54a600fe36afc378311ecf.jpg);
+			background-size: cover;
 		}
+		#wrap::before {
+			content: '';
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			filter: blur(5px);
+	  }
 		.control {
 			width: 20%;
 			margin: 0 auto ;
@@ -78,13 +85,7 @@
 			transform: translate(-50%,-50%);
 			padding: 50px;
 			border-radius: 20px;
-			background: rgb(255, 232, 133);
-      background: -moz-linear-gradient(35deg, rgb(255, 232, 133) 0%, rgb(90, 204, 250) 76%);
-      background: -webkit-linear-gradient(35deg, rgb(255, 232, 133) 0%, rgb(90, 204, 250) 76%);
-      background: -o-linear-gradient(35deg, rgb(255, 232, 133) 0%, rgb(90, 204, 250) 76%);
-      background: -ms-linear-gradient(35deg, rgb(255, 232, 133) 0%, rgb(90, 204, 250) 76%);
-      background: linear-gradient(125deg, rgb(255, 232, 133) 0%, rgb(90, 204, 250) 76%);
-			background-size: cover;
+			background-color: rgba(255,255,255,0.6);
 		}
 		.ct2 {
 			position: relative;
