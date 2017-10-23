@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>getWeather</title>
+  <link rel="stylesheet" href="./src/css/weather.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div class="control">
+      <span id="add">+</span>
+      <span id="go-left">
+        <</span>
+          <span id="go-right">></span>
+    </div>
+    <div class="circles">
+      <span class="active"></span>
+
+    </div>
+    <div id="addWea">
+      <b>x</b>
+      <input type="text" placeholder="输入城市拼音，如：shanghai，beijing"></input>
+      <span>加载中……</span>
+      <ul>
+      </ul>
+    </div>
+    <div class="ct">
+      <div class="ct2">
+        <div class="content clearfix">
+          <div class="inner clearfix">
+            <span class="close">x</span>
+            <div class="today-wea">
+              <div class="now-wea">
+                <h2>--市</h2>
+                <p>--</p>
+                <span class="tem">--°</span>
+                <img src="">
+              </div>
+              <div class="all-day">
+                <h3>星期二 今天</h3>
+                <hr>
+                <ul class="wea-24h clearfix">
+                  <li>
+                    <h4>现在</h4>
+                    <img src="" alt="">
+                    <span>--°</span>
+                  </li>
+                  <li>
+                    <h4>下午12时</h4>
+                    <img src="" alt="">
+                    <span>--°</span>
+                  </li>
+                  <li>
+                    <h4>下午3时</h4>
+                    <img src="" alt="">
+                    <span>--°</span>
+                  </li>
+                  <li>
+                    <h4>下午6时</h4>
+                    <img src="" alt="">
+                    <span>--°</span>
+                  </li>
+                  <li>
+                    <h4>下午9时</h4>
+                    <img src="" alt="">
+                    <span>--°</span>
+                  </li>
+                  <li>
+                    <h4>上午12时</h4>
+                    <img src="" alt="">
+                    <span>--°</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="future">
+              <ul class="list">
+                <li>
+                  <span>星期三</span>
+                  <img class="am" src="" alt="">
+                  <img class="pm" src="">
+                  <span class="wind">风力--级</span>
+                  <span class="tem">--°/--°</span>
+                </li>
+                <li>
+                  <span>星期四</span>
+                  <img class="am" src="" alt="">
+                  <img class="pm" src="">
+                  <span class="wind">风力--级</span>
+                  <span class="tem">--°/--°</span>
+                </li>
+                <li>
+                  <span>星期五</span>
+                  <img class="am" src="" alt="">
+                  <img class="pm" src="">
+                  <span class="wind">风力--级</span>
+                  <span class="tem">--°/--°</span>
+                </li>
+                <li>
+                  <span>星期六</span>
+                  <img class="am" src="" alt="">
+                  <img class="pm" src="">
+                  <span class="wind">风力--级</span>
+                  <span class="tem">--°/--°</span>
+                </li>
+                <li>
+                  <span>星期日</span>
+                  <img class="am" src="" alt="">
+                  <img class="pm" src="">
+                  <span class="wind">风力--级</span>
+                  <span class="tem">--°/--°</span>
+                </li>
+                <li>
+                  <span>星期一</span>
+                  <img class="am" src="" alt="">
+                  <img class="pm" src="">
+                  <span class="wind">风力--级</span>
+                  <span class="tem">--°/--°</span>
+                </li>
+                <li>
+                  <span>星期二</span>
+                  <img class="am" src="" alt="">
+                  <img class="pm" src="">
+                  <span class="wind">风力--级</span>
+                  <span class="tem">--°/--°</span>
+                </li>
+                <li>
+                  <span>星期三</span>
+                  <img class="am" src="" alt="">
+                  <img class="pm" src="">
+                  <span class="wind">风力--级</span>
+                  <span class="tem">--°/--°</span>
+                </li>
+                <li>
+                  <span>星期四</span>
+                  <img class="am" src="" alt="">
+                  <img class="pm" src="">
+                  <span class="wind">风力--级</span>
+                  <span class="tem">--°/--°</span>
+                </li>
+                <li>
+                  <span>星期五</span>
+                  <img class="am" src="" alt="">
+                  <img class="pm" src="">
+                  <span class="wind">风力--级</span>
+                  <span class="tem">--°/--°</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src='./src/js/weather.js'></script>
+
+</html>
